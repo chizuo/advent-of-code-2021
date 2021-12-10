@@ -1,12 +1,11 @@
 from classes.assets.day5.point import Point
 
 
-class Line:
+class Straight:
     def __init__(self, firstPoint, secondPoint) -> None:
         self.firstPoint = firstPoint
         self.secondPoint = secondPoint
-        self.straightline = self.buildline()
-        self.line = self.buildDiagonalLines()
+        self.line = self.buildline()
 
     def __repr__(self) -> str:
         rep = 'Line: '
@@ -51,5 +50,62 @@ class Line:
 
         return line
 
-    def buildDiagonalLines(self) -> list:
-        pass
+
+class Diagonal:
+    def __init__(self, firstPoint, secondPoint) -> None:
+        self.firstPoint = firstPoint
+        self.secondPoint = secondPoint
+        self.line = self.buildline()
+
+    def __repr__(self) -> str:
+        rep = 'Line: '
+        for entry in self.line:
+            rep += str(entry) + ' '
+
+        return rep
+
+    def buildline(self) -> list:
+        x1 = self.firstPoint.x
+        y1 = self.firstPoint.y
+        x2 = self.secondPoint.x
+        y2 = self.secondPoint.y
+
+        line = []
+        simple = False
+
+        if(x1 == y1 and x2 == y2):
+            simple = True
+
+            if (x1 > x2):
+                start = x2
+                end = x1
+            else:
+                start = x1
+                end = x2
+        else:
+            start = 0
+            end = abs(x1-x2)
+            x = x1
+            y = y1
+
+        while(start <= end):
+            if(simple == True):
+                line.append(Point(start, start))
+                start += 1
+            else:
+                line.append(Point(x, y))
+                start += 1
+                if(x1 > x2 and y1 > y2):
+                    x -= 1
+                    y -= 1
+                elif(x1 > x2 and y1 < y2):
+                    x -= 1
+                    y += 1
+                elif(x1 < x2 and y1 > y2):
+                    x += 1
+                    y -= 1
+                else:
+                    x += 1
+                    y += 1
+
+        return line
