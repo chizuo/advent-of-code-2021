@@ -1,6 +1,5 @@
 from classes.assets.day5.point import Point
-from classes.assets.day5.line import Straight
-from classes.assets.day5.line import Diagonal
+from classes.assets.day5.line import (Straight, Diagonal)
 import copy
 
 
