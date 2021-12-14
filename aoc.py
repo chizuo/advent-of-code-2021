@@ -4,6 +4,7 @@ from classes.day3 import BinaryDiagnostic
 from classes.day4 import SquidGames
 from classes.day5 import HydrothermalVenture
 from classes.day6 import Lanternfish
+from classes.day7 import TreacheryOfWhales
 
 
 def main():
@@ -19,6 +20,8 @@ def main():
     fifthDay.solution()
     sixthDay = Lanternfish()
     sixthDay.solution()
+    seventhDay = TreacheryOfWhales()
+    seventhDay.solution()
 
 
 main()

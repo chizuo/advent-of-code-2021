@@ -27,15 +27,15 @@ class Lanternfish:
 
         group = []
 
-        for i in range(9):  # 9 to represent all possible numbers that'll exist in the group: 0 -> 8
+        for i in range(9):  # 9 to represent all possible states that'll exist in the group: 0 -> 8
             group.append(lanternfish.count(i))
 
         return group
 
     def sim(self, days):
         """
-        Description: Using the initial occurences of a particular fish start state, this method creates an
-        abstract queue to increment the amount of children each group will have after each day.
+        Description: Using the initial occurences of a particular fish start state, this method creates a queue 
+        to increment the amount of children each group will have after each day.
         """
         group = copy.deepcopy(self.input)
 
