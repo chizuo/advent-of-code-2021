@@ -5,6 +5,7 @@ from classes.day4 import SquidGames
 from classes.day5 import HydrothermalVenture
 from classes.day6 import Lanternfish
 from classes.day7 import TreacheryOfWhales
+from classes.day8 import SegmentSearch
 
 
 def main():
@@ -22,6 +23,8 @@ def main():
     sixthDay.solution()
     seventhDay = TreacheryOfWhales()
     seventhDay.solution()
+    eigthDay = SegmentSearch()
+    eigthDay.solution()
 
 
 main()
