@@ -10,7 +10,6 @@ from classes.day9 import SmokeBasin
 
 
 def main():
-    """
     firstDay = SonarSweep()
     firstDay.solution()
     secondDay = Dive()
@@ -27,7 +26,6 @@ def main():
     seventhDay.solution()
     eigthDay = SegmentSearch()
     eigthDay.solution()
-    """
     ninthDay = SmokeBasin()
     ninthDay.solution()
 
