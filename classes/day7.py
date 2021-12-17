@@ -84,6 +84,10 @@ class TreacheryOfWhales:
         return lowest
 
     def solution(self) -> None:
-        print("\n**** Day 7: The Treacher of Whales ****")
+        print("")
+        day = "**** Day 7: The Treachery of Whales ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

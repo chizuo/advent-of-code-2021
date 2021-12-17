@@ -136,6 +136,10 @@ class BinaryDiagnostic:
         print(self.question)
 
     def solution(self) -> None:
-        print("\n**** Day 3: Binary Diagnostic ****", end="\n")
+        print("")
+        day = "**** Day 3: Binary Diagnostic ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

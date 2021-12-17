@@ -174,6 +174,10 @@ class SquidGames:
                                 break
 
     def solution(self) -> None:
-        print("\n**** Day 4: Giant Squid ****")
+        print("")
+        day = "**** Day 4: Giant Squid ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

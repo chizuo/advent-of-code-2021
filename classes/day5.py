@@ -111,6 +111,10 @@ class HydrothermalVenture:
         return intersect
 
     def solution(self) -> None:
-        print("\n**** Day 5: Hydrothermal Venture ****")
+        print("")
+        day = "**** Day 5: Hydrothermal Venture ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

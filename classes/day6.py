@@ -58,6 +58,10 @@ class Lanternfish:
         return population
 
     def solution(self) -> None:
-        print("\n**** Day 6: Lanternfish ****")
+        print("")
+        day = "**** Day 6: Lanternfish ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

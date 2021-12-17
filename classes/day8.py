@@ -143,6 +143,10 @@ class SegmentSearch:
         return sum(values)
 
     def solution(self) -> None:
-        print("\n**** Day 8: Seven Segment Search ****", end="\n")
+        print("")
+        day = "**** Day 8: Seven Segment Search ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

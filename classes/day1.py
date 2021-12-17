@@ -60,6 +60,10 @@ class SonarSweep:
         return increased
 
     def solution(self) -> None:
-        print("\n**** Day 1: Sonar Sweep ****")
+        print("")
+        day = "**** Day 1: Sonar Sweep ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

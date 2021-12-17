@@ -147,6 +147,10 @@ class SmokeBasin:
         return basin[0]*basin[1]*basin[2]
 
     def solution(self) -> None:
-        print("\n**** Day 9: Smoke Basin ****", end="\n")
+        print("")
+        day = "**** Day 9: Smoke Basin ****"
+        print(day)
         print("Part 1: ", self.part1solution)
         print("Part 2: ", self.part2solution)
+        for char in day:
+            print("*", end="")

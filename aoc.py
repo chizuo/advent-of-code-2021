@@ -1,33 +1,24 @@
-from classes.day1 import SonarSweep
-from classes.day2 import Dive
-from classes.day3 import BinaryDiagnostic
-from classes.day4 import SquidGames
-from classes.day5 import HydrothermalVenture
-from classes.day6 import Lanternfish
-from classes.day7 import TreacheryOfWhales
-from classes.day8 import SegmentSearch
-from classes.day9 import SmokeBasin
+from constants import banner, interface, onSelect, onQuestion
 
 
 def main():
-    firstDay = SonarSweep()
-    firstDay.solution()
-    secondDay = Dive()
-    secondDay.solution()
-    thirdDay = BinaryDiagnostic()
-    thirdDay.solution()
-    fourthDay = SquidGames()
-    fourthDay.solution()
-    fifthDay = HydrothermalVenture()
-    fifthDay.solution()
-    sixthDay = Lanternfish()
-    sixthDay.solution()
-    seventhDay = TreacheryOfWhales()
-    seventhDay.solution()
-    eigthDay = SegmentSearch()
-    eigthDay.solution()
-    ninthDay = SmokeBasin()
-    ninthDay.solution()
+    cache = {}
+    option = -1
+    [print(line) for line in banner]
+    while(option != 0):
+        option = interface()
+        if(option != 0):
+            onQuestion(
+                input("\nWould you like to read the problem? [Y]es or [N]o: "), option)
+            if(option in cache):
+                day = cache.get(option)
+            else:
+                day = onSelect(option)
+                cache[option] = day
+            day.solution()
+            input("\n\nPress any key to continue...\n")
+        else:
+            print("\n*** Thank you for demoing my Advent of Code 2021 ***\n")
 
 
 main()
